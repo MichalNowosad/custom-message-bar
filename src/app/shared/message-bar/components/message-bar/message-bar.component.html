@@ -1,6 +1,8 @@
 <div class="message-bar-container"
     [class]="typeClass()">
-    <div class="message-bar-status-icon">Status icon</div>
+    <div class="message-bar-status-icon">
+        <app-status-icon [type]="type()"></app-status-icon>
+    </div>
     <div class="message-bar-body">
         <div class="message-bar-content">Content</div>
         <div class="message-bar-action-buttons">Action Buttons</div>

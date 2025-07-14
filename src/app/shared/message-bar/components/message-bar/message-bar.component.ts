@@ -1,8 +1,9 @@
 import {ChangeDetectionStrategy, Component, computed, input} from '@angular/core';
+import {StatusIconComponent} from "../status-icon/status-icon.component";
 
 @Component({
   selector: 'app-message-bar',
-  imports: [],
+  imports: [StatusIconComponent],
   templateUrl: './message-bar.component.html',
   styleUrl: './message-bar.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
