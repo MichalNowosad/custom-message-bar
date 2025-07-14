@@ -1,0 +1,26 @@
+div.message-bar-container {
+  display: flex;
+  padding: 1rem 1.5rem;
+  background-color: lightblue;
+
+  div.message-bar-status-icon {
+    background-color: aqua;
+  }
+
+  div.message-bar-body {
+    background-color: aquamarine;
+    flex: 1;
+
+    div.message-bar-content {
+      background-color: azure;
+    }
+
+    div.message-bar-action-buttons {
+      background-color: beige;
+    }
+  }
+
+  div.message-bar-close-button {
+    background-color: cadetblue;
+  }
+}
