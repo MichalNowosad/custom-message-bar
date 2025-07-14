@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, computed, input} from '@angular/core';
 
 @Component({
   selector: 'app-message-bar',
@@ -8,4 +8,14 @@ import {ChangeDetectionStrategy, Component, input} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MessageBarComponent {
+  public type = input<'information' | 'success' | 'warning' | 'error'>('error');
+
+  private typeClassesMap: Record<'information' | 'success' | 'warning' | 'error', string> = {
+    information: 'message-bar-information',
+    success: 'message-bar-success',
+    warning: 'message-bar-warning',
+    error: 'message-bar-error'
+  };
+
+  public readonly typeClass= computed(() => this.typeClassesMap[this.type()]);
 }

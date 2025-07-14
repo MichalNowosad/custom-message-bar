@@ -1,7 +1,31 @@
 div.message-bar-container {
   display: flex;
   padding: 1rem 1.5rem;
-  background-color: lightblue;
+  border-left: 2px solid;
+
+  &.message-bar-information {
+    background-color: var(--blue-light);
+    border-color: var(--blue-dark);
+    color: var(--blue-dark);
+  }
+
+  &.message-bar-success {
+    background-color: var(--green-light);
+    border-color: var(--green-dark);
+    color: var(--green-dark);
+  }
+
+  &.message-bar-warning {
+    background-color: var(--yellow-light);
+    border-color: var(--yellow-dark);
+    color: var(--yellow-dark);
+  }
+
+  &.message-bar-error {
+    background-color: var(--red-light);
+    border-color: var(--red-dark);
+    color: var(--red-dark);
+  }
 
   div.message-bar-status-icon {
     background-color: aqua;
