@@ -32,12 +32,10 @@ div.message-bar-container {
   }
 
   div.message-bar-body {
-    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     flex: 1;
-
-    div.message-bar-content {
-      background-color: azure;
-    }
 
     div.message-bar-action-buttons {
       background-color: beige;
