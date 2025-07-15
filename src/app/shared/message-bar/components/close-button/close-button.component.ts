@@ -1,4 +1,4 @@
-import {Component, output} from '@angular/core';
+import {Component, output, OutputEmitterRef} from '@angular/core';
 
 @Component({
   selector: 'app-close-button',
@@ -7,7 +7,7 @@ import {Component, output} from '@angular/core';
   styleUrl: './close-button.component.scss'
 })
 export class CloseButtonComponent {
-  public close = output<void>();
+  public close: OutputEmitterRef<void> = output<void>();
 
   public onClose(): void {
     this.close.emit();

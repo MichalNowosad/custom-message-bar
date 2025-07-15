@@ -1,15 +1,15 @@
 <span class="material-symbols-outlined">
     @switch (type()) {
-        @case ('information') {
+        @case (MessageBarType.Information) {
             info
         }
-        @case ('success') {
+        @case (MessageBarType.Success) {
             check_circle
         }
-        @case ('warning') {
+        @case (MessageBarType.Warning) {
             warning
         }
-        @case ('error') {
+        @case (MessageBarType.Error) {
             error
         }
     }

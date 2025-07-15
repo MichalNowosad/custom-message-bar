@@ -1,4 +1,5 @@
-import {Component, input} from '@angular/core';
+import {Component, input, InputSignal} from '@angular/core';
+import {MessageBarType} from "../../models/message-bar-type.enum";
 
 @Component({
   selector: 'app-status-icon',
@@ -7,5 +8,7 @@ import {Component, input} from '@angular/core';
   styleUrl: './status-icon.component.scss'
 })
 export class StatusIconComponent {
-  public type = input<'information' | 'success' | 'warning' | 'error'>('information');
+  public type: InputSignal<MessageBarType> = input<MessageBarType>(MessageBarType.Information);
+
+  public MessageBarType = MessageBarType;
 }
