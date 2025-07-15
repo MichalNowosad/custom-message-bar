@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { MessageBar } from './message-bar.component';
+import {MessageBarComponent} from "./message-bar.component";
 
 describe('MessageBar', () => {
-  let component: MessageBar;
-  let fixture: ComponentFixture<MessageBar>;
+  let component: MessageBarComponent;
+  let fixture: ComponentFixture<MessageBarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MessageBar]
+      imports: [MessageBarComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MessageBar);
+    fixture = TestBed.createComponent(MessageBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
