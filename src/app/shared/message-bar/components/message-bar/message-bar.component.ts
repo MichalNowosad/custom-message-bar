@@ -1,7 +1,7 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  computed,
+  computed, ContentChild, ElementRef,
   input,
   InputSignal,
   output,
@@ -24,6 +24,8 @@ export class MessageBarComponent {
   public close: OutputEmitterRef<void> = output<void>();
 
   public readonly typeClass: Signal<string> = computed(() => this.typeClassesMap[this.type()]);
+
+  public MessageBarType = MessageBarType;
 
   private readonly typeClassesMap: Record<MessageBarType, string> = {
     information: 'message-bar-information',

@@ -37,8 +37,29 @@ div.message-bar-container {
     gap: 0.5rem;
     flex: 1;
 
+    div.message-bar-body-row {
+      display: flex;
+      gap: 2rem;
+
+      div.message-bar-action-buttons {
+        justify-content: flex-end;
+      }
+    }
+
+    div.message-bar-content {
+      flex: 1;
+      min-width: 50%;
+    }
+
     div.message-bar-action-buttons {
-      background-color: beige;
+      display: flex;
+      flex-wrap: wrap;
+      height: fit-content;
+      gap: 0.25rem;
+
+      &:empty {
+        display: none;
+      }
     }
   }
 }
