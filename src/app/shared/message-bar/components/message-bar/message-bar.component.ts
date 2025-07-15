@@ -1,7 +1,7 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  computed, ContentChild, ElementRef,
+  computed,
   input,
   InputSignal,
   output,
