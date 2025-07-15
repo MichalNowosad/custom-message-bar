@@ -11,6 +11,7 @@ import {CloseButtonComponent} from "../close-button/close-button.component";
 })
 export class MessageBarComponent {
   public type = input<'information' | 'success' | 'warning' | 'error'>('error');
+  public dismissible = input<boolean>(false);
   public close = output<void>();
 
   public readonly typeClass= computed(() => this.typeClassesMap[this.type()]);
