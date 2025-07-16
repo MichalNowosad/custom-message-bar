@@ -1,34 +1,38 @@
+@use "../../../theme/type-theme";
+@use "sass:map";
+
+@mixin message-bar-variant($theme) {
+  background-color: map.get($theme, light);
+  border-color: map.get($theme, dark);
+  color: map.get($theme, dark);
+
+  .message-bar-content {
+    color: map.get($theme, very-dark);
+  }
+}
+
 div.message-bar-container {
   display: flex;
   padding: 1rem 1.5rem 1rem 1rem;
   border-left: 2px solid;
   gap: 1rem;
 
+  @include message-bar-variant(type-theme.$information-theme);
+
   &.message-bar-information {
-    background-color: var(--blue-light);
-    border-color: var(--blue-dark);
-    color: var(--blue-dark);
+    @include message-bar-variant(type-theme.$information-theme);
   }
 
   &.message-bar-success {
-    background-color: var(--green-light);
-    border-color: var(--green-dark);
-    color: var(--green-dark);
+    @include message-bar-variant(type-theme.$success-theme);
   }
 
   &.message-bar-warning {
-    background-color: var(--yellow-light);
-    border-color: var(--yellow-dark);
-    color: var(--yellow-dark);
+    @include message-bar-variant(type-theme.$warning-theme);
   }
 
   &.message-bar-error {
-    background-color: var(--red-light);
-    border-color: var(--red-dark);
-    color: var(--red-dark);
-  }
-
-  div.message-bar-status-icon {
+    @include message-bar-variant(type-theme.$error-theme);
   }
 
   div.message-bar-body {

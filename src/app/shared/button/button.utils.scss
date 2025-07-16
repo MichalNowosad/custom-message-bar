@@ -1,0 +1,34 @@
+@use "sass:map";
+
+@mixin button-variant($border, $text-color, $background-color, $background-hover-color) {
+  border: $border;
+  color: $text-color;
+  background-color: $background-color;
+
+  &:hover {
+    background-color: $background-hover-color;
+  }
+}
+
+@mixin button-type($theme) {
+  &.button--primary {
+    @include button-variant(none, var(--white), map.get($theme, dark), map.get($theme, very-dark));
+  }
+
+  &.button--secondary {
+    $border: 1px solid map.get($theme, dark);
+
+    @include button-variant($border, map.get($theme, dark), transparent, var(--black-transparent-light));
+  }
+
+  &.button--tertiary {
+    @include button-variant(none, map.get($theme, very-dark), transparent, var(--black-transparent-light));
+
+    border-radius: 1rem;
+  }
+}
+
+@mixin button-size($height, $padding) {
+  height: $height;
+  padding: $padding;
+}

@@ -1,0 +1,35 @@
+@use "../theme/type-theme";
+@use "./button.utils" as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  @include button-type(type-theme.$information-theme);
+  @include button-size(1.75rem, 0.75rem);
+
+  // button types
+  &.button--information {
+    @include button-type(type-theme.$information-theme);
+  }
+
+  &.button--success {
+    @include button-type(type-theme.$success-theme);
+  }
+
+  &.button--warning {
+    @include button-type(type-theme.$warning-theme);
+  }
+
+  &.button--error {
+    @include button-type(type-theme.$error-theme);
+  }
+
+  // button sizes
+  &.button--medium {
+    @include button-size(1.75rem, 0.75rem)
+  }
+}

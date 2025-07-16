@@ -1,0 +1,23 @@
+$information-theme: (
+  light: var(--blue-light),
+  dark: var(--blue-dark),
+  very-dark: var(--blue-very-dark),
+);
+
+$success-theme: (
+  light: var(--green-light),
+  dark: var(--green-dark),
+  very-dark: var(--green-very-dark),
+);
+
+$warning-theme: (
+  light: var(--yellow-light),
+  dark: var(--yellow-dark),
+  very-dark: var(--yellow-very-dark),
+);
+
+$error-theme: (
+  light: var(--red-light),
+  dark: var(--red-dark),
+  very-dark: var(--red-very-dark),
+);

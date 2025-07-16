@@ -232,10 +232,19 @@
       <h1>Hello, {{ title() }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
         <app-message-bar [dismissible]="true">
-            <button message-bar-button="right">Button 1 Right</button>
+            <button message-bar-button="right"
+                    class="button button--secondary button--medium button--error">
+                Button 1 Right
+            </button>
 
-            <button message-bar-button="bottom">Button 1 Bottom</button>
-            <button message-bar-button="bottom">Button 2 Bottom</button>
+            <button message-bar-button="bottom"
+                    class="button button--primary button--medium">
+                Button 1 Bottom
+            </button>
+            <button message-bar-button="bottom"
+                    class="button button--secondary button--medium">
+                Button 2 Bottom
+            </button>
             <div message-bar-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum est id ultrices sodales. Suspendisse maximus orci non feugiat suscipit. Etiam maximus diam id lectus tristique tempor. In semper ante vel odio sagittis lacinia. Nulla tempor ex felis, eu varius libero finibus eu. Duis ornare, ante vitae venenatis placerat, urna eros condimentum ipsum, a convallis justo nibh ac sapien. Donec lobortis nisl enim, commodo varius quam laoreet vitae.</div>
         </app-message-bar>
     </div>
