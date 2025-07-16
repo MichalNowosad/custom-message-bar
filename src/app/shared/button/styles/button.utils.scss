@@ -10,25 +10,39 @@
   }
 }
 
+@mixin button-size($height, $font-size, $padding) {
+  width: fit-content;
+  height: $height;
+  padding: $padding;
+  font-size: $font-size;
+}
+
 @mixin button-type($theme) {
   &.button--primary {
     @include button-variant(none, var(--white), map.get($theme, dark), map.get($theme, very-dark));
+
+    &.button--medium {
+      @include button-size(1.75rem, 0.75rem, 0.75rem);
+    }
   }
 
   &.button--secondary {
     $border: 1px solid map.get($theme, dark);
 
     @include button-variant($border, map.get($theme, dark), transparent, var(--black-transparent-light));
+
+    &.button--medium {
+      @include button-size(1.75rem, 0.75rem, 0.75rem);
+    }
   }
 
   &.button--tertiary {
     @include button-variant(none, map.get($theme, very-dark), transparent, var(--black-transparent-light));
 
     border-radius: 1rem;
-  }
-}
 
-@mixin button-size($height, $padding) {
-  height: $height;
-  padding: $padding;
+    &.button--medium {
+      @include button-size(1.75rem, 1rem, 0.15rem);
+    }
+  }
 }

@@ -9,7 +9,6 @@
   cursor: pointer;
 
   @include button-type(type-theme.$information-theme);
-  @include button-size(1.75rem, 0.75rem);
 
   // button types
   &.button--information {
@@ -26,10 +25,5 @@
 
   &.button--error {
     @include button-type(type-theme.$error-theme);
-  }
-
-  // button sizes
-  &.button--medium {
-    @include button-size(1.75rem, 0.75rem)
   }
 }
