@@ -24,7 +24,7 @@
     </div>
     @if (dismissible()) {
         <div class="message-bar-close-button">
-            <app-close-button [type]="type()" (close)="onClose()"></app-close-button>
+            <app-close-button [type]="type()" (closeMessageBar)="onClose()"></app-close-button>
         </div>
     }
 </div>

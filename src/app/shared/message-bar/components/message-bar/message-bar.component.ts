@@ -22,11 +22,11 @@ import {MESSAGE_BAR_TYPE_CLASS_MAP} from "../../models/message-bar.const";
 export class MessageBarComponent {
   public type: InputSignal<ElementType> = input<ElementType>('information');
   public dismissible: InputSignal<boolean> = input<boolean>(false);
-  public close: OutputEmitterRef<void> = output<void>();
+  public closeMessageBar: OutputEmitterRef<void> = output<void>();
 
   public readonly typeClass: Signal<string> = computed(() => MESSAGE_BAR_TYPE_CLASS_MAP[this.type()]);
 
   public onClose(): void {
-    this.close.emit();
+    this.closeMessageBar.emit();
   }
 }
