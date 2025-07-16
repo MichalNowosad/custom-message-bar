@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, input, InputSignal} from '@angular/core';
-import {MessageBarType} from "../../models/message-bar-type.enum";
+import {ElementType} from "../../../literals/element-type";
 
 @Component({
   selector: 'app-status-icon',
@@ -8,7 +8,5 @@ import {MessageBarType} from "../../models/message-bar-type.enum";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class StatusIconComponent {
-  public type: InputSignal<MessageBarType> = input<MessageBarType>(MessageBarType.Information);
-
-  public MessageBarType = MessageBarType;
+  public type: InputSignal<ElementType> = input<ElementType>('information');
 }

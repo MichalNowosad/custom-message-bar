@@ -1,0 +1,1 @@
+export type ElementType = 'information' | 'success' | 'warning' | 'error';

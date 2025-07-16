@@ -9,7 +9,8 @@ import {
 } from '@angular/core';
 import {StatusIconComponent} from "../status-icon/status-icon.component";
 import {CloseButtonComponent} from "../close-button/close-button.component";
-import {MessageBarType} from "../../models/message-bar-type.enum";
+import {ElementType} from "../../../literals/element-type";
+import {MESSAGE_BAR_TYPE_CLASS_MAP} from "../../models/message-bar.const";
 
 @Component({
   selector: 'app-message-bar',
@@ -19,20 +20,11 @@ import {MessageBarType} from "../../models/message-bar-type.enum";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MessageBarComponent {
-  public type: InputSignal<MessageBarType> = input<MessageBarType>(MessageBarType.Information);
+  public type: InputSignal<ElementType> = input<ElementType>('information');
   public dismissible: InputSignal<boolean> = input<boolean>(false);
   public close: OutputEmitterRef<void> = output<void>();
 
-  public readonly typeClass: Signal<string> = computed(() => this.typeClassesMap[this.type()]);
-
-  public MessageBarType = MessageBarType;
-
-  private readonly typeClassesMap: Record<MessageBarType, string> = {
-    information: 'message-bar-information',
-    success: 'message-bar-success',
-    warning: 'message-bar-warning',
-    error: 'message-bar-error'
-  };
+  public readonly typeClass: Signal<string> = computed(() => MESSAGE_BAR_TYPE_CLASS_MAP[this.type()]);
 
   public onClose(): void {
     this.close.emit();

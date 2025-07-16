@@ -1,5 +1,5 @@
-@use "../theme/type-theme";
-@use "./button.utils" as *;
+@use "../../theme/type-theme";
+@use "button.utils" as *;
 
 .button {
   display: flex;

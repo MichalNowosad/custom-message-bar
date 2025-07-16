@@ -231,7 +231,7 @@
       </svg>
       <h1>Hello, {{ title() }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
-        <app-message-bar [dismissible]="true">
+        <app-message-bar [dismissible]="true" [type]="'error'">
             <button message-bar-button="right"
                     class="button button--secondary button--medium button--error">
                 Button 1 Right

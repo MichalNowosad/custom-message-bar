@@ -1,4 +1,4 @@
-@let areActionButtonsVisible = type() === MessageBarType.Information || type() === MessageBarType.Error;
+@let areActionButtonsVisible = type() === 'information' || type() === 'error';
 
 <div class="message-bar-container"
     [class]="typeClass()">
@@ -24,7 +24,7 @@
     </div>
     @if (dismissible()) {
         <div class="message-bar-close-button">
-            <app-close-button (close)="onClose()"></app-close-button>
+            <app-close-button [type]="type()" (close)="onClose()"></app-close-button>
         </div>
     }
 </div>
