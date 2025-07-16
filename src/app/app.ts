@@ -4,7 +4,7 @@ import {MessageBarComponent} from "./shared/message-bar/components/message-bar/m
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MessageBarComponent],
+  imports: [MessageBarComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
